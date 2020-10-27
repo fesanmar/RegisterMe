@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RegisterMe</string>
+    <string name="button_push_me">Save</string>
+    <string name="button_erase">Clear</string>
+    <string name="text_view_name">Name</string>
+    <string name="edit_text_name_hint">Type your name</string>
+    <string name="text_view_surname">Surname</string>
+    <string name="edit_text_surname_hint">Type your surname</string>
+    <string name="text_view_age">Age</string>
+    <string name="edit_text_age_hint">Type your age</string>
+    <string name="text_view_gender">Gender</string>
+    <string name="male_gender_option">Male</string>
+    <string name="female_gender_option">Female</string>
+    <string name="text_field_empty"></string>
+    <string name="text_view_marital_status">Marital Status</string>
+    <string-array name="marital_statuses">
+        <item>Married</item>
+        <item>Separated</item>
+        <item>Widower</item>
+        <item>Other</item>
+    </string-array>
+    <string name="any_children_switch">Any children</string>
+</resources>
