@@ -190,4 +190,13 @@
         app:layout_constraintTop_toBottomOf="@+id/tfName"
         app:layout_constraintVertical_bias="0.041" />
 
+    <TextView
+        android:id="@+id/lblMonitor"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorError"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/swChildren"
+        app:layout_constraintStart_toStartOf="@+id/spMaritialStatus"
+        app:layout_constraintTop_toBottomOf="@+id/spMaritialStatus" />
 </androidx.constraintlayout.widget.ConstraintLayout>

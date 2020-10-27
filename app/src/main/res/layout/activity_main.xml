@@ -191,4 +191,16 @@
         app:layout_constraintTop_toTopOf="@+id/spMaritialStatus"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/lblMonitor"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorError"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnClear"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="@+id/btnSave"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave"
+        app:layout_constraintVertical_bias="0.223" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RadioGroup rgGender;
     Spinner spMaritalStatus;
     SwitchCompat swChildren;
+    TextView lblMonitor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         btnClear = findViewById(R.id.btnClear);
         btnClear.setOnClickListener(this);
+        lblMonitor = findViewById(R.id.lblMonitor);
     }
 
     private void fillMaritalStatusSpinner() {
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rgGender.clearCheck();
         spMaritalStatus.setSelection(0);
         swChildren.setChecked(false);
+        lblMonitor.setText("");
     }
 
     public void click(View view) {
