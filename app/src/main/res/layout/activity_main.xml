@@ -77,8 +77,8 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.747"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tfSurname"
         app:layout_constraintTop_toBottomOf="@+id/tfSurname"
         app:layout_constraintVertical_bias="0.041" />
 
@@ -86,8 +86,6 @@
         android:id="@+id/tfName"
         android:layout_width="236dp"
         android:layout_height="46dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:autofillHints="Tu nombre"
         android:ems="10"
         android:hint="@string/edit_text_name_hint"
@@ -104,8 +102,6 @@
         android:id="@+id/tfSurname"
         android:layout_width="236dp"
         android:layout_height="46dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/edit_text_surname_hint"
@@ -139,10 +135,10 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.748"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tfAge"
         app:layout_constraintTop_toBottomOf="@+id/tfAge"
-        app:layout_constraintVertical_bias="0.002">
+        app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
             android:id="@+id/rbMale"
@@ -169,7 +165,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/spMaritialStatus"
-        app:layout_constraintVertical_bias="0.629" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <Spinner
         android:id="@+id/spMaritialStatus"
@@ -178,20 +174,20 @@
         android:minWidth="102dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rgGender"
         app:layout_constraintTop_toBottomOf="@+id/rgGender"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintVertical_bias="0.05" />
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/swChildren"
         android:layout_width="wrap_content"
         android:layout_height="46dp"
         android:text="@string/any_children_switch"
         app:layout_constraintBottom_toBottomOf="@+id/spMaritialStatus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.794"
-        app:layout_constraintStart_toStartOf="@+id/spMaritialStatus"
+        app:layout_constraintEnd_toEndOf="@+id/rgGender"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toEndOf="@+id/spMaritialStatus"
         app:layout_constraintTop_toTopOf="@+id/spMaritialStatus"
         app:layout_constraintVertical_bias="0.0" />
 
