@@ -1,22 +1,27 @@
 package com.example.registerme;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnButton;
     Button btnClear;
     EditText txtName;
     EditText txtSurname;
+    EditText txtAge;
+    RadioGroup rgGender;
     Spinner spMaritalStatus;
+    SwitchCompat swChildren;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,22 +34,18 @@ public class MainActivity extends AppCompatActivity {
         fillMaritalStatusSpinner();
         txtName = findViewById(R.id.tfName);
         txtSurname = findViewById(R.id.tfSurname);
-        btnButton = findViewById(R.id.button);
+        txtAge = findViewById(R.id.tfAge);
+        rgGender = findViewById(R.id.rgGender);
+        swChildren = findViewById(R.id.swChildren);
+        btnButton = findViewById(R.id.btnSave);
         btnButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 click(view);
             }
         });
-        btnClear = findViewById(R.id.button2);
-        btnClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, String.valueOf(view.getContext() == MainActivity.this), Toast.LENGTH_SHORT).show();
-                assert view.getContext() == MainActivity.this;
-                clearTextFields(view);
-            }
-        });
+        btnClear = findViewById(R.id.btnClear);
+        btnClear.setOnClickListener(this);
     }
 
     private void fillMaritalStatusSpinner() {
@@ -55,12 +56,22 @@ public class MainActivity extends AppCompatActivity {
         spMaritalStatus.setAdapter(adapter);
     }
 
-    public void click(View view) {
-        Toast.makeText(MainActivity.this, "Me pulsaste...", Toast.LENGTH_SHORT).show();
+    @Override
+    public void onClick(View view) {
+        if (view.equals(btnClear))
+            clearTextFields();
     }
 
-    public void clearTextFields(View view) {
+    public void clearTextFields() {
         txtName.setText("");
         txtSurname.setText("");
+        txtAge.setText("");
+        rgGender.clearCheck();
+        spMaritalStatus.setSelection(0);
+        swChildren.setChecked(false);
+    }
+
+    public void click(View view) {
+        Toast.makeText(MainActivity.this, "Me pulsaste...", Toast.LENGTH_SHORT).show();
     }
 }
