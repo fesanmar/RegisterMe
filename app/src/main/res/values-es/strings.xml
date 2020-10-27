@@ -8,7 +8,6 @@
     <string name="edit_text_surname_hint">Introduce tu apellido</string>
     <string name="text_view_age">Edad</string>
     <string name="edit_text_age_hint">Introduce tu edad</string>
-    <string name="text_field_empty"></string>
     <string name="text_view_gender">Género</string>
     <string name="male_gender_option">Hombre</string>
     <string name="female_gender_option">Mujer</string>
@@ -20,4 +19,10 @@
         <item>Otro</item>
     </string-array>
     <string name="any_children_switch">Hijos</string>
+    <string name="success_message">%s, %s, %s, %s %s y %s</string>
+    <string name="adult">Mayor de edad</string>
+    <string name="under_age">menor de edad</string>
+    <string name="no_children">sin hijos</string>
+    <string name="with_children">con hijos</string>
+    <string name="missing_fields_message">Por favor, rellene los siguientes campos: </string>
 </resources>

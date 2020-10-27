@@ -11,7 +11,6 @@
     <string name="text_view_gender">Gender</string>
     <string name="male_gender_option">Male</string>
     <string name="female_gender_option">Female</string>
-    <string name="text_field_empty"></string>
     <string name="text_view_marital_status">Marital Status</string>
     <string-array name="marital_statuses">
         <item>Married</item>
@@ -20,4 +19,10 @@
         <item>Other</item>
     </string-array>
     <string name="any_children_switch">Any children</string>
+    <string name="success_message">%s, %s, %s, %s %s and %s</string>
+    <string name="adult">adult</string>
+    <string name="under_age">under age</string>
+    <string name="no_children">no children</string>
+    <string name="with_children">have children</string>
+    <string name="missing_fields_message">Please fill in the following fields: </string>
 </resources>
