@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void displayAccurateMessage() {
-        Collection<String> emptyFields = getMissingFields();
+        List<String> emptyFields = getMissingFields();
         if (emptyFields.isEmpty())
             showOutputAndClearForm();
         else
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         clearTextFields();
     }
 
-    private Collection<String> getMissingFields() {
+    private List<String> getMissingFields() {
         List<String> missingFields = new ArrayList<>();
         for (Map.Entry<String, View> pair : elements.entrySet()) {
             if (isEmpty(pair.getValue()))
@@ -142,11 +141,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
     }
 
-    private void displayMissingFieldsError(Collection<String> missingFields) {
-        StringBuilder sb = new StringBuilder(getString(R.string.missing_fields_message));
+    private void displayMissingFieldsError(List<String> missingFields) {
+        StringBuilder sb = new StringBuilder(getString(R.string.missing_fields_message)).append(" ");
         for (String field : missingFields)
-            sb.append(", ").append(field);
+            sb.append(field).append(isLastItemOfList(field, missingFields) ? "." : ", ");
         lblMonitor.setText(sb.toString());
+    }
+
+    private boolean isLastItemOfList(String field, List<String> missingFields) {
+        return missingFields.indexOf(field) == missingFields.size() - 1;
     }
 
 }
